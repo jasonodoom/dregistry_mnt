@@ -1,4 +1,8 @@
+# Docker image running Docker registry with volumes
+#
+# VERSION   0.0.1
 FROM registry:latest
+MAINTAINER Jason Odoom <jason@ohdoom.net>
 
 # Add the custom configuration file  
 ADD ./config.yml /docker-registry/config/config.yml
