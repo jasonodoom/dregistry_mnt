@@ -12,10 +12,10 @@ common: &common
     disable_token_auth: _env:DISABLE_TOKEN_AUTH
     # No priv key
     privileged_key: _env:PRIVILEGED_KEY
-    # No search backend
-    search_backend: _env:SEARCH_BACKEND
-    # SQLite search backend
-    sqlalchemy_index_database: _env:SQLALCHEMY_INDEX_DATABASE:sqlite:////tmp/docker-registry.db
+    search_backend: sqlalchemy
+    sqlalchemy_index_database: sqlite:////tmp/docker-registry.db
+
+
 
     # Mirroring is not enabled
     mirroring:
